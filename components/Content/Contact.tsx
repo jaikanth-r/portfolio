@@ -1,29 +1,66 @@
 export default function Contact() {
   return (
-    <article>
-      <p className="mb-3 text-sm text-neutral-500">contact</p>
+    <article className="max-w-5xl">
+      <p className="text-sm text-neutral-500">
+        contact
+      </p>
 
-      <h2 className="text-4xl font-semibold tracking-tight text-white">
+      <h2 className="mt-3 text-4xl font-semibold tracking-tight text-white">
         Let&apos;s connect.
       </h2>
 
       <p className="mt-6 max-w-2xl leading-7 text-neutral-400">
-        I&apos;m open to interesting software, cloud, research, and
-        engineering opportunities.
+        I&apos;m open to software engineering, cloud, research,
+        and interesting technical opportunities.
       </p>
 
-      <div className="mt-8 space-y-3 text-sm">
-        <p className="text-neutral-300">
-          Email: <span className="text-neutral-500">your@email.com</span>
-        </p>
+      <p className="mt-3 max-w-2xl leading-7 text-neutral-500">
+        Feel free to reach out.
+      </p>
 
-        <p className="text-neutral-300">
-          GitHub: <span className="text-neutral-500">github.com/yourusername</span>
-        </p>
+      <div className="mt-10 space-y-3">
+        <a
+          href="mailto:jaikanthr01@gmail.com"
+          className="glass-panel flex items-center justify-between rounded-xl px-5 py-4 transition hover:bg-white/[0.04]"
+        >
+          <span className="text-sm text-neutral-300">
+            Email
+          </span>
 
-        <p className="text-neutral-300">
-          LinkedIn: <span className="text-neutral-500">linkedin.com/in/yourusername</span>
-        </p>
+          <span className="text-sm text-neutral-500">
+            jaikanthr01@gmail.com ↗
+          </span>
+        </a>
+
+        <a
+          href="https://github.com/jaikanth-r"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass-panel flex items-center justify-between rounded-xl px-5 py-4 transition hover:bg-white/[0.04]"
+        >
+          <span className="text-sm text-neutral-300">
+            GitHub
+          </span>
+
+          <span className="text-sm text-neutral-500">
+            jaikanth-r ↗
+          </span>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jaikanthr01"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass-panel flex items-center justify-between rounded-xl px-5 py-4 transition hover:bg-white/[0.04]"
+        >
+          <span className="text-sm text-neutral-300">
+            LinkedIn
+          </span>
+
+          <span className="text-sm text-neutral-500">
+            jaikanthr01 ↗
+          </span>
+        </a>
       </div>
     </article>
   );

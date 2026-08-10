@@ -2,51 +2,71 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <article className="max-w-4xl">
-      <div className="flex flex-col gap-8 md:flex-row md:items-start">
-        <div className="shrink-0">
+    <article className="max-w-5xl">
+      <p className="text-sm text-neutral-500">
+        about / profile
+      </p>
+
+      <div className="mt-8 grid gap-8 md:grid-cols-[220px_1fr] md:items-start">
+        <div className="relative h-[220px] w-[220px] overflow-hidden rounded-2xl border border-white/10">
           <Image
             src="/images/JAI.jpg"
-            alt="Jaikanth"
-            width={240}
-            height={240}
-            className="h-auto w-48 rounded-2xl border border-white/10"
+            alt="Jaikanth R."
+            fill
+            className="object-contain"
             priority
           />
         </div>
 
         <div className="pt-1">
-          <p className="text-sm text-neutral-500">
-            about / profile
-          </p>
-
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-white">
-            Jaikanth
+          <h2 className="text-4xl font-semibold tracking-tight text-white">
+            Jaikanth R.
           </h2>
 
           <p className="mt-2 text-lg text-neutral-400">
-            Software Developer
+            Software Engineer · Cloud &amp; Distributed Systems
           </p>
 
-          <div className="mt-5 flex items-center gap-2 text-sm text-neutral-500">
-            <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-            Open to opportunities
+          <div className="mt-8 max-w-3xl space-y-5">
+            <p className="text-lg leading-8 text-neutral-400">
+              I’m a software engineer focused on cloud computing,
+              distributed systems, blockchain infrastructure, and
+              backend development.
+            </p>
+
+            <p className="leading-7 text-neutral-500">
+              My work involves building and experimenting with systems
+              across Linux, containers, networking, cloud platforms, and
+              decentralized technologies. I’m particularly interested in
+              understanding how complex systems operate beneath their
+              abstractions and designing reliable, scalable solutions.
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="mt-12 max-w-3xl">
-        <p className="text-lg leading-8 text-neutral-400">
-          I build software with a focus on cloud computing,
-          distributed systems, blockchain, and modern software
-          engineering.
+      <div className="mt-12 border-t border-white/10 pt-8">
+        <p className="mb-5 text-sm font-medium uppercase tracking-wider text-neutral-500">
+          Currently focused on
         </p>
 
-        <p className="mt-5 leading-7 text-neutral-500">
-          I enjoy understanding how systems work underneath the
-          abstraction and turning that understanding into practical,
-          reliable software.
-        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {[
+            "Cloud Architecture",
+            "Distributed Systems",
+            "Blockchain Infrastructure",
+            "Linux & Networking",
+            "Backend Engineering",
+            "Systems Design",
+          ].map((item) => (
+            <div
+              key={item}
+              className="glass-panel rounded-xl px-4 py-3 text-sm text-neutral-300"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </article>
   );

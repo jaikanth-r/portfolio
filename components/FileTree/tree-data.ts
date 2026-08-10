@@ -12,9 +12,9 @@ export const fileTree = [
     name: "projects",
     type: "folder",
     children: [
-      { name: "hyperledger", type: "file" },
-      { name: "image-matcher", type: "file" },
-      { name: "cloud-monitor", type: "file" },
+      { name: "ai-audit", type: "file" },
+      { name: "cloud-sec", type: "file" },
+      { name: "payroll", type: "file" },
     ],
   },
   {

@@ -1,41 +1,191 @@
 export default function CloudMonitor() {
   return (
-    <article className="max-w-4xl">
+    <article className="max-w-5xl">
       <p className="text-sm text-neutral-500">
-        projects / cloud-monitor
+        projects / payroll
       </p>
 
       <div className="mt-3 flex items-center gap-4">
         <h2 className="text-4xl font-semibold tracking-tight text-white">
-          Cloud Monitor
+          Payroll Management System
         </h2>
 
         <a
-          href="https://github.com/"
+          href="https://github.com/jaikanth-r/payroll-system"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Open Cloud Monitor project on GitHub"
-          title="GitHub"
-          className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/10 text-neutral-500 transition hover:border-white/20 hover:text-white"
+          aria-label="Open Payroll Management System on GitHub"
+          title="Open project"
+          className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-neutral-400 transition hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a10.97 10.97 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.18v3.24c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-          </svg>
+          <span className="text-lg leading-none">↗</span>
         </a>
       </div>
 
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
-        A cloud infrastructure experiment exploring monitoring,
-        containers, networking, and Linux environments.
+      <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-400">
+        A containerized payroll management system for employee records,
+        automated salary calculations, compensation reporting, and
+        persistent database storage.
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-2">
-        {["AWS", "Docker", "Linux", "Networking"].map((tech) => (
-          <span key={tech} className="rounded-md border border-white/10 px-3 py-1.5 text-sm text-neutral-400">
-            {tech}
-          </span>
-        ))}
-      </div>
+      <section className="mt-10">
+        <h3 className="text-sm font-medium uppercase tracking-wider text-neutral-500">
+          Key Capabilities
+        </h3>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {[
+            {
+              title: "Employee Record Management",
+              description:
+                "CRUD operations for employee onboarding, records, and organizational assignments.",
+            },
+            {
+              title: "Automated Payroll Computation",
+              description:
+                "Processes gross pay, statutory deductions, tax withholdings, allowances, and net salary.",
+            },
+            {
+              title: "Containerized Architecture",
+              description:
+                "Separates the PHP application and MariaDB database into isolated Docker services.",
+            },
+            {
+              title: "Automated Database Provisioning",
+              description:
+                "Bootstrap scripts initialize the database schema and seed data during first-time deployment.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="glass-panel rounded-xl p-5"
+            >
+              <h4 className="text-sm font-medium text-neutral-300">
+                {item.title}
+              </h4>
+
+              <p className="mt-2 text-sm leading-6 text-neutral-500">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h3 className="text-sm font-medium uppercase tracking-wider text-neutral-500">
+          Architecture
+        </h3>
+
+        <div className="mt-4 glass-panel rounded-xl p-6">
+          <div className="grid gap-4 md:grid-cols-3 md:items-center">
+            <div className="rounded-lg border border-white/10 bg-white/[0.02] p-4">
+              <p className="text-sm font-medium text-neutral-300">
+                Web Application
+              </p>
+              <p className="mt-2 text-xs leading-5 text-neutral-500">
+                PHP / Apache
+                <br />
+                Service: webapp
+                <br />
+                Port: 8080
+              </p>
+            </div>
+
+            <div className="hidden text-center text-neutral-600 md:block">
+              →
+            </div>
+
+            <div className="rounded-lg border border-white/10 bg-white/[0.02] p-4">
+              <p className="text-sm font-medium text-neutral-300">
+                Database
+              </p>
+              <p className="mt-2 text-xs leading-5 text-neutral-500">
+                MariaDB 10.x
+                <br />
+                Service: db
+                <br />
+                Port: 3306
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.02] p-4">
+            <p className="text-sm font-medium text-neutral-300">
+              Persistent Storage
+            </p>
+            <p className="mt-2 text-xs text-neutral-500">
+              Docker named volume: mariadb_data
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h3 className="text-sm font-medium uppercase tracking-wider text-neutral-500">
+          Tech Stack
+        </h3>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {[
+            "PHP",
+            "MariaDB",
+            "Docker",
+            "Docker Compose",
+            "Apache",
+            "PDO",
+            "SQL",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="rounded-md border border-white/10 px-3 py-1.5 text-sm text-neutral-300"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h3 className="text-sm font-medium uppercase tracking-wider text-neutral-500">
+          Quick Start
+        </h3>
+
+        <div className="mt-4 space-y-5">
+          <div>
+            <p className="mb-2 text-sm text-neutral-300">
+              01 / Configure environment
+            </p>
+
+            <pre className="overflow-x-auto rounded-xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-neutral-400">
+{`git clone https://github.com/jaikanth-r/payroll-system.git
+cd payroll-system
+cp .env.example .env`}
+            </pre>
+          </div>
+
+          <div>
+            <p className="mb-2 text-sm text-neutral-300">
+              02 / Build and start the containers
+            </p>
+
+            <pre className="overflow-x-auto rounded-xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-neutral-400">
+{`docker-compose up -d --build
+docker-compose ps`}
+            </pre>
+          </div>
+
+          <div>
+            <p className="mb-2 text-sm text-neutral-300">
+              03 / Access the application
+            </p>
+
+            <pre className="overflow-x-auto rounded-xl border border-white/10 bg-black/20 p-4 text-xs leading-6 text-neutral-400">
+{`http://localhost:8080`}
+            </pre>
+          </div>
+        </div>
+      </section>
     </article>
   );
 }
