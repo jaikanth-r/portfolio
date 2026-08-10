@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A192F;
+  --foreground: #E2E8F0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--background);
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  min-height: 100vh;
+  background: #0F172A;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+/* Dark theme palette */
+
+.text-white {
+  color: #E2E8F0;
+}
+
+.text-neutral-300 {
+  color: #CBD5E1;
+}
+
+.text-neutral-400 {
+  color: #94A3B8;
+}
+
+.text-neutral-500 {
+  color: #475569;
+}
+
+.text-neutral-600 {
+  color: #475569;
+}
+
+.border-white\/10 {
+  border-color: rgba(168, 178, 209, 0.12);
+}
+
+.bg-white\/\[0\.08\] {
+  background-color: rgba(100, 255, 218, 0.08);
+}
+
+.hover\:bg-white\/\[0\.04\]:hover {
+  background-color: rgba(100, 255, 218, 0.04);
+}
+
+.bg-white\/\[0\.02\] {
+  background-color: rgba(100, 255, 218, 0.02);
+}
+
+.text-green-500 {
+  color: #64FFDA;
+}
+
+/* Light theme */
+
+[data-theme="light"] body {
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(0, 0, 0, 0.035),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fafafa 0%,
+      #f3f3f3 50%,
+      #fafafa 100%
+    );
+  color: #171717;
+}
+
+[data-theme="light"] .text-white {
+  color: #171717;
+}
+
+[data-theme="light"] .text-neutral-300 {
+  color: #404040;
+}
+
+[data-theme="light"] .text-neutral-400 {
+  color: #525252;
+}
+
+[data-theme="light"] .text-neutral-500 {
+  color: #737373;
+}
+
+[data-theme="light"] .text-neutral-600 {
+  color: #a3a3a3;
+}
+
+[data-theme="light"] .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .bg-white\/\[0\.08\] {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+[data-theme="light"] .hover\:bg-white\/\[0\.04\]:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .bg-white\/\[0\.02\] {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .text-green-500 {
+  color: #16a34a;
+}
+
+/* Glass panels */
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 8px 30px rgba(0, 0, 0, 0.08);
+  transition:
+    background 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.glass-panel:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(148, 163, 184, 0.14);
 }
