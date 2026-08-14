@@ -33,6 +33,19 @@ export default function Contact() {
         </a>
 
         <a
+          href="tel:+919003566338"
+          className="glass-panel flex items-center justify-between rounded-xl px-5 py-4 transition hover:bg-white/[0.04]"
+        >
+          <span className="text-sm text-neutral-300">
+            Phone
+          </span>
+
+          <span className="text-sm text-neutral-500">
+            +91 9003566338 ↗
+          </span>
+        </a>
+
+        <a
           href="https://github.com/jaikanth-r"
           target="_blank"
           rel="noopener noreferrer"
