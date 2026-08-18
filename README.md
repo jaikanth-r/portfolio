@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jaikanth R. — Portfolio
 
-## Getting Started
+Personal portfolio of **Jaikanth R.**, a software engineer focused on cloud computing, distributed systems, blockchain, backend development, and security.
 
-First, run the development server:
+## Live Portfolio
 
-```bash
+https://jaikanthr.vercel.app
+
+## Built With
+
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
+- Docker
+- Vercel
+
+## Featured Projects
+
+### AI-Audit — Model Integrity Ledger
+
+A Hyperledger Fabric-based system for maintaining an auditable record of AI model integrity.
+
+Repository: https://github.com/jaikanth-r/fabric-lab
+
+### Hardened Cloud-Native Microservice
+
+A DevSecOps project focused on container hardening, vulnerability management, least-privilege execution, and command-injection remediation.
+
+Repository: https://github.com/jaikanth-r/cloud-sec-project
+
+### Payroll Management System
+
+A containerized payroll application built around a PHP application layer and MariaDB database.
+
+Repository: https://github.com/jaikanth-r/payroll-system
+
+## Contact
+
+- Email: jaikanthr01@gmail.com
+- GitHub: https://github.com/jaikanth-r
+- LinkedIn: https://www.linkedin.com/in/jaikanthr01
+
+## Development
+
+Clone the repository:
+
+git clone https://github.com/jaikanth-r/portfolio.git
+cd portfolio
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The portfolio is deployed through Vercel and connected to the main branch of this repository.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Changes pushed to main trigger a new deployment automatically.
